@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>获取数据</button>
+	<script src="myajax.js"></script>
+	<script>
+		
+	document.querySelector('button').onclick = function(){
+		// var xhr = new XMLHttpRequest();
+		// xhr.open('get','data/test.txt');
+		// xhr.send();
+		// xhr.onreadystatechange = function(){
+		// 	if(xhr.readyState === 4 && xhr.status === 200){
+		// 		alert(xhr.responseText);
+		// 	}
+		// }
+		myajax('get','data/test.txt',function(data){
+			alert("封装的数据"+data);
+		})
+
+		// var result = myajax('get','data/test.txt')
+		// alert(result);
+	}
+
+	</script>
+</body>
+</html>
